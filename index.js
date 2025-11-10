@@ -15,7 +15,17 @@
  */
 
 const removeDuplicates = (nums) => {
-    //write your code here
+    for (let i = 0; i < nums.length; i++) {
+        for ( let j = i + 1; j < nums.length; j++) {
+            if ( nums[i] === nums[j]) { //if equal remove from array
+                let newNums = nums.slice(i, j)
+                console.log(newNums)
+        } else {
+            continue
+        }
+    }
+}
+    return nums.length
 };
 
 // Example usage (commented out to avoid interference with tests)
